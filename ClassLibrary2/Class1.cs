@@ -19,7 +19,7 @@ namespace ClassLibrary2
 
         RemoteWebDriverExtended driver;
 
-        [TestFixtureSetUp]
+        [SetUp]
         public void TestSetUp()
         {
             DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -69,7 +69,7 @@ namespace ClassLibrary2
             Object result = driver.ExecuteScript(commandStartApp, parameters);
         }
 
-        [TestFixtureTearDown]
+        [TearDown]
         public void FixtureTearDown()
         {
             // closes every window associated with this driver
